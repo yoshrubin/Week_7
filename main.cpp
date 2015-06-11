@@ -1,9 +1,15 @@
-#include "Student.h"
+include "Student.h"
 
+//MAIN
 int main(){
-BA stud;
-cout << "enter id, first/last names, num courses, grades\n";
-cin >> stud.id >> stud.firstName >> stud.lastName >> stud.numCourses >> stud.grades;
-stud.print();
-return 0;
+    vector<Student*> stud;
+    // abe avraham
+    stud.push_back(new BA);
+    stud.at(0)->setID(123);
+    stud.at(0)->setFN("abe");
+    stud.at(0)->setLN("avraham");
+    stud.at(0)->setNC(3);
+    (BA)stud.at(0)->setGrades((int arr[90,100,90]));
+
+    return 0;
 }
