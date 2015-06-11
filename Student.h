@@ -3,7 +3,8 @@
 #include <vector>
 
 using namespace std;
-//base class
+
+//BASE CLASS
 class Student{
 protected:
     int id;
@@ -36,9 +37,8 @@ public:
     ~BA();
     bool milga();
     void print();
-    void setGrades(int[]);
+    void setGrades(vector<int>);
 };
-
 
 //MA child of BA
 class MA : public BA{
@@ -49,7 +49,7 @@ public:
     ~MA();
     bool milga();
     void print();
-    //void setRes(bool usrRes){research = usrRes;}
+    void setRes(int);
 };
 
 //PHD class
@@ -62,5 +62,4 @@ public:
     bool milga();
     void print();
     void setResHours(int);
-    int getResHours();
 };

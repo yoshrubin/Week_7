@@ -35,7 +35,7 @@ bool BA::milga(){
         return false;
 }
 //BA setGrades
-void BA::setGrades(int grade[]){
+void BA::setGrades(vector<int> grade){
     for (int i = 0; i < numCourses; i++){
         grades.push_back(grade[i]);
     }
@@ -54,6 +54,7 @@ void BA::print(){
     cout << endl;
 }
 
+//MA CTOR
 MA::MA(){}
 //MA DTOR
 MA::~MA(){}
@@ -66,6 +67,9 @@ bool MA::milga(){
     if (((gradeSum/numCourses)>= 90) && (numCourses >= 7) && (research))
         return true;
     return false;
+}
+void MA::setRes(int a){
+    research = a;
 }
 //MA print (research yes or no and grades)
 void MA::print(){
@@ -94,10 +98,6 @@ PHD::~PHD(){}
 
 void PHD::setResHours(int usrResHour){
     researcHours = usrResHour;
-}
-//research hours
-int PHD::getResHours(){
-    return researcHours;
 }
 //PHD deserving of scholarship?
 bool PHD::milga(){
